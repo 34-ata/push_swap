@@ -6,7 +6,7 @@
 /*   By: faata <faata@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 14:29:50 by faata             #+#    #+#             */
-/*   Updated: 2024/01/30 13:45:16 by faata            ###   ########.fr       */
+/*   Updated: 2024/01/30 18:19:15 by faata            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,6 @@ int	ft_qsa(t_stack *stack, int len, int rbc, int midvalue)
 		ft_rra(stack);
 	return (ft_qsa(stack, size / 2 + size % 2, 0, 0)
 		&& ft_qsb(stack, size / 2, 0));
-	return (1);
 }
 
 int	ft_qsb(t_stack *stack, int len, int rbc)
