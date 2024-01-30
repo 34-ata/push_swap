@@ -10,19 +10,19 @@ RM	=	rm -f
 FLAGS	= -Wall -Wextra -Werror
 
 $(NAME): 
-		make -C libft
-		make -C ft_printf
+		make -C libft -s
+		make -C ft_printf -s
 		$(CC) $(FLAGS) $(SRCS) -o $(NAME)
 
 all: $(NAME)
 
 clean:
-		make clean -C libft
-		make clean -C ft_printf
+		make clean -C libft -s
+		make clean -C ft_printf -s
 
 fclean: clean
-		make fclean -C libft
-		make fclean -C ft_printf
+		make fclean -C libft -s
+		make fclean -C ft_printf -s
 		$(RM) $(NAME)
 
 re: fclean all
