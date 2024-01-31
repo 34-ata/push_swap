@@ -45,7 +45,11 @@ int	main(int argc, char **av)
 	{
 		av++;
 		if (argc == 2)
+		{
 			av = ft_split(*av, ' ');
+			if (!*av)
+				return (write(2, "Error\n", 6));
+		}
 		ft_push_swap(av);
 		return (0);
 	}

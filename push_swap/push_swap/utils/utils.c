@@ -15,7 +15,7 @@
 void	ft_err(int *stack)
 {
 	free(stack);
-	ft_printf("Error\n");
+	write(2, "Error\n", 6);
 	exit (1);
 }
 
@@ -30,6 +30,8 @@ int	ft_qsatoi(char *str, int *stack, unsigned int i, int sign)
 		sign = -1;
 	if (str[i] == '+' || str[i] == '-')
 		i++;
+	if (!str[i])
+		ft_err(stack);
 	while (str[i])
 	{
 		if (str[i] < '0' || str[i] > '9')
